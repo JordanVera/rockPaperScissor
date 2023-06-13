@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$body_color: #1b2a4a;
+$font_color: #fff;
+$white: #fff;
+$black: #020202;
+$blue: #2a45c2;
+$grey: #5e6c83;
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  background-color: $body_color;
+  color: $font_color;
+}
+
+#header {
+  border: 1px solid $grey;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 3rem auto;
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.8rem;
+  }
+
+  .score {
+    background-color: $white;
+    color: $body_color;
+    width: 100px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+
+    h2 {
+      font-size: 3rem !important;
+    }
+
+    h3 {
+      margin: 0;
+      color: $blue;
+      font-weight: 500;
+    }
+  }
+}
+
+#rps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+
+  .top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+
+  }
+
+  .bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  .paper {
+    transform: translateY(-50%);
+    border: 1.6rem solid #536ff5;
+    margin-left: 5rem !important;
+    margin-right: 5rem !important;
+  }
+
+  .rock {
+    transform: translateY(-50%) translateX(-50%);
+
+    margin-left: 5rem !important;
+  }
+
+  .scissor {
+    transform: translateY(-50%);
+    border: 1.6rem solid #eca51d;
+  }
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 50% !important;
+  background-color: $white !important;
+}
+
+.paper {
+  border: 1.6rem solid #536ff5 !important;
+}
+
+.rock {
+  border: 1.6rem solid #dd3c59 !important;
+}
+
+.scissor {
+  border: 1.6rem solid #eca51d !important;
+}
+
+#pick {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .center-element {
+    align-self: center;
+
+    h3 {
+      font-size: 5rem;
+    }
+  }
+
+  .btn {
+    text-align: center !important;
+    width: 100%;
+    background-color: $white;
+    border: none;
+  }
+}
+
+.rulesBtn {
+  position: absolute !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  border: 1px solid $white !important;
+  border-radius: 8px !important;
+  padding: .4rem 2rem !important;
+  color: $white !important;
+}
+
+.modal {
+
+  h2 {
+    color: $black;
+    margin-top: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .MuiBox-root {
+    background-color: $white;
+  }
+}
