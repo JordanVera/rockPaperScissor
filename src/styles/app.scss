@@ -26,11 +26,11 @@ body {
   margin: 3rem auto;
 
   h2 {
-    font-size: 2rem;
+    font-size: 40px;
     margin: 0;
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 1.8rem;
+    line-height: 2.2rem;
   }
 
   .score {
@@ -42,13 +42,16 @@ body {
     border-radius: 1rem;
 
     h2 {
-      font-size: 3rem !important;
+      font-size: 64px !important;
+      font-weight: 700;
     }
 
     h3 {
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: 8px;
       color: $blue;
       font-weight: 500;
+      font-size: 1rem;
     }
   }
 }
@@ -120,8 +123,6 @@ body {
 }
 
 #pick {
-  display: flex;
-  justify-content: space-between;
 
   h3 {
     text-align: center;
@@ -130,19 +131,25 @@ body {
     margin: 3rem 0;
   }
 
-  .center-element {
-    align-self: center;
-
-    h3 {
-      font-size: 5rem;
-    }
-  }
-
   .btn {
     text-align: center !important;
     width: 100%;
     background-color: $white;
     border: none;
+    height: 3rem;
+  }
+
+  .pickContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .center-element {
+      align-self: center;
+
+      h3 {
+        font-size: 5rem;
+      }
+    }
   }
 }
 
@@ -158,6 +165,15 @@ body {
 
 .modal {
 
+  .heading {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      color: $grey;
+    }
+  }
+
   h2 {
     color: $black;
     margin-top: 0;
@@ -167,5 +183,39 @@ body {
 
   .MuiBox-root {
     background-color: $white;
+  }
+}
+
+@media (max-width : 900px) {
+  .card {
+    height: 130px !important;
+    width: 130px !important;
+
+    img {
+      height: 56px;
+    }
+  }
+
+  .center-element {
+    display: none !important;
+  }
+
+  .paper {
+    border: 1rem solid #536ff5 !important;
+  }
+
+  .rock {
+    border: 1rem solid #dd3c59 !important;
+  }
+
+  .scissor {
+    border: 1rem solid #eca51d !important;
+  }
+}
+
+@media (min-width : 900px) {
+
+  .mobileOnly {
+    display: none !important;
   }
 }

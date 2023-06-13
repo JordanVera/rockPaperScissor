@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box, Button, Typography, Modal } from '@mui/material';
+import { Box, Button, Modal, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Rules() {
   const [open, setOpen] = React.useState(false);
@@ -19,7 +20,11 @@ export default function Rules() {
         className="modal"
       >
         <Box sx={style}>
-          <h2>Rules</h2>
+          <div className="heading">
+            <h2>Rules</h2>
+
+            <CloseIcon className="icon" onClick={handleClose} />
+          </div>
           <img src="/media/rules.png" alt="rock paper scissors rules graphic" />
         </Box>
       </Modal>
