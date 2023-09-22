@@ -10,6 +10,7 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
   const logic = (userPick, computerPick) => {
     console.log('computerPick = ' + computerPick);
 
+    // Rock Paper Scissors logic
     if (userPick === computerPick) {
       setMsg('Tie');
       console.log('TIEEE');

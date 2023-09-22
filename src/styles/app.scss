@@ -187,14 +187,26 @@ body {
 }
 
 @media (max-width : 900px) {
-  .card {
-    height: 130px !important;
-    width: 130px !important;
+  #pick {
+    h3 {
+      font-size: 1.5rem !important;
+    }
 
-    img {
-      height: 56px;
+    .pickContainer {
+      justify-content: space-evenly;
+    }
+
+    .card {
+      height: 130px !important;
+      width: 130px !important;
+
+
+      img {
+        height: 56px;
+      }
     }
   }
+
 
   .center-element {
     display: none !important;
