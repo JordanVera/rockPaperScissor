@@ -3,7 +3,7 @@ import { Container } from '@mui/material';
 
 import Header from './Header';
 import RockPaperScissor from './RockPaperScissor';
-import Pick from './Pick';
+import Results from './Results';
 import Rules from './Rules';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         {userPick === '' ? (
           <RockPaperScissor setUserPick={setUserPick} />
         ) : (
-          <Pick
+          <Results
             userPick={userPick}
             scoreCount={scoreCount}
             setUserPick={setUserPick}

@@ -82,6 +82,11 @@ body {
     align-items: center;
     height: 200px;
     width: 200px;
+
+    &:hover {
+      outline: 1.2rem solid #ffffff10;
+      transition: 0.2s;
+    }
   }
 
   .paper {
@@ -93,7 +98,6 @@ body {
 
   .rock {
     transform: translateY(-50%) translateX(-50%);
-
     margin-left: 5rem !important;
   }
 
@@ -122,7 +126,7 @@ body {
   border: 1.6rem solid #eca51d !important;
 }
 
-#pick {
+#results {
 
   h3 {
     text-align: center;
@@ -134,9 +138,22 @@ body {
   .btn {
     text-align: center !important;
     width: 100%;
+    color: $body_color;
     background-color: $white;
     border: none;
     height: 3rem;
+
+    &:hover {
+      color: #dd3c59;
+    }
+  }
+
+  .blueCircle {
+    margin-top: 25%;
+    width: 224px;
+    height: 224px;
+    background: #172340;
+    border-radius: 50%;
   }
 
   .pickContainer {

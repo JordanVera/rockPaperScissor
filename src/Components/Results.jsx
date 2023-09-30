@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
+const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
   const [computerGenPick, setComputerGenPick] = useState(null);
   const [msg, setMsg] = useState('');
   const [winOrLose, setWinOrLose] = useState('');
@@ -35,15 +35,17 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
       Math.floor(Math.random() * 3)
     ];
 
-    setComputerGenPick(computerPick);
-    logic(userPick, computerPick);
+    setTimeout(() => {
+      setComputerGenPick(computerPick);
+      logic(userPick, computerPick);
+    }, 3000);
   };
 
   useEffect(() => {
     generateComputerPick();
   }, []);
   return (
-    <div id="pick">
+    <div id="results">
       <div className="pickContainer">
         <div className="left-element">
           <h3>You Picked</h3>
@@ -63,22 +65,25 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
             </Button>
           )}
         </div>
-        <div className="center-element">
-          <h3>{msg}</h3>
-          <Button
-            className="btn"
-            onClick={() => {
-              setUserPick('');
-            }}
-            variant="outlined"
-            color={`${winOrLose === 'w' ? 'success' : 'error'}`}
-          >
-            Play Again
-          </Button>
-        </div>
+        {computerGenPick && (
+          <div className="center-element">
+            <h3>{msg}</h3>
+            <Button
+              className="btn"
+              onClick={() => {
+                setUserPick('');
+              }}
+              variant="outlined"
+              color={`${winOrLose === 'w' ? 'success' : 'error'}`}
+            >
+              Play Again
+            </Button>
+          </div>
+        )}
+
         <div className="right-element">
           <h3>The House Picked</h3>
-          {computerGenPick && (
+          {computerGenPick ? (
             <Button className={`card ${computerGenPick}`}>
               <img
                 className="img"
@@ -86,6 +91,8 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
                 alt="rock"
               />
             </Button>
+          ) : (
+            <div className="blueCircle"></div>
           )}
         </div>
       </div>
@@ -97,7 +104,6 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
             setUserPick('');
           }}
           variant="outlined"
-          color={`${winOrLose === 'w' ? 'success' : 'error'}`}
         >
           Play Again
         </Button>
@@ -106,4 +112,4 @@ const Pick = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
   );
 };
 
-export default Pick;
+export default Results;
