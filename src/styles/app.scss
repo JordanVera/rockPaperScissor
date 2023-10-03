@@ -67,7 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
-
+    max-width: 100vw;
   }
 
   .bottom-row {
@@ -86,6 +86,11 @@ body {
     &:hover {
       outline: 1.2rem solid #ffffff10;
       transition: 0.2s;
+    }
+
+    @media (max-width : 550px) {
+      width: 140px;
+      height: 140px;
     }
   }
 
@@ -135,6 +140,14 @@ body {
     margin: 3rem 0;
   }
 
+  .card {
+
+    &:hover {
+      outline: 1.2rem solid #ffffff20;
+    }
+  }
+
+
   .btn {
     text-align: center !important;
     width: 100%;
@@ -156,9 +169,18 @@ body {
     border-radius: 50%;
   }
 
-  .pickContainer {
+  .centerContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pickContainer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* Adjust columns as needed */
+    gap: 20px;
+    align-items: center;
 
     .center-element {
       align-self: center;
