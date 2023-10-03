@@ -163,6 +163,7 @@ body {
 
   .blueCircle {
     margin-top: 25%;
+
     width: 224px;
     height: 224px;
     background: #172340;
@@ -179,16 +180,31 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     /* Adjust columns as needed */
-    gap: 20px;
+    gap: 5rem;
     align-items: center;
 
     .center-element {
       align-self: center;
+      opacity: 0; // Initially hidden
+
+      transition: transform 0.5s ease-in-out;
+      animation: fadeIn 0.5s ease-in-out forwards; // 5s delay before animation starts
 
       h3 {
         font-size: 5rem;
       }
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
   }
 }
 
