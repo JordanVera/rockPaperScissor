@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 
 const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
   const [computerGenPick, setComputerGenPick] = useState(null);
@@ -39,21 +39,38 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
     setTimeout(() => {
       setComputerGenPick(computerPick);
       logic(userPick, computerPick);
-    }, 3000);
+    }, 1000);
 
     setTimeout(() => {
       setDelayedMessage(true);
-    }, 5000);
+    }, 3000);
   };
 
   useEffect(() => {
     generateComputerPick();
+
+    // animations
+    const leftElement = document.querySelector('#left-element');
+    const rightElement = document.querySelector('#right-element');
+
+    // Create the animation
+    gsap.to(leftElement, {
+      x: -100, // Slide to the left by 100 pixels (adjust as needed)
+      duration: 1, // Animation duration in seconds
+      delay: 3, // Delay the animation by 5 seconds
+    });
+
+    gsap.to(rightElement, {
+      x: 100, // Slide to the left by 100 pixels (adjust as needed)
+      duration: 1, // Animation duration in seconds
+      delay: 3, // Delay the animation by 5 seconds
+    });
   }, []);
   return (
     <div id="results">
       <div className="centerContainer">
         <div className="pickContainer">
-          <div className="left-element">
+          <div id="left-element">
             <h3>You Picked</h3>
             {userPick === 'rock' && (
               <Button className="card rock">
@@ -87,7 +104,7 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
             </div>
           )}
 
-          <div className="right-element">
+          <div id="right-element">
             <h3>The House Picked</h3>
             {computerGenPick ? (
               <Button className={`card ${computerGenPick}`}>

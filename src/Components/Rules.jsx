@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Button, Modal, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import 'animate.css';
 
 export default function Rules() {
   const [open, setOpen] = React.useState(false);
@@ -8,7 +9,7 @@ export default function Rules() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className="animate__animated animate__fadeIn">
       <Button onClick={handleOpen} className="rulesBtn" variant="outlined">
         Rules
       </Button>

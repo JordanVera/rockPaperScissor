@@ -1,8 +1,9 @@
 import { Button } from '@mui/material';
+import 'animate.css';
 
 const RockPaperScissor = ({ setUserPick }) => {
   return (
-    <div id="rps">
+    <div id="rps" className="animate__animated animate__fadeIn">
       <div className="top-row">
         <Button onClick={() => setUserPick('paper')} className="card paper">
           <img className="img" src="/media/paper.png" alt="rock" />
