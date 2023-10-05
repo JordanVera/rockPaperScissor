@@ -73,17 +73,17 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
           <div id="left-element">
             <h3>You Picked</h3>
             {userPick === 'rock' && (
-              <Button className="card rock">
+              <Button className={`card rock`}>
                 <img className="img" src="/media/rock.png" alt="rock" />
               </Button>
             )}
             {userPick === 'scissor' && (
-              <Button className="card scissor">
+              <Button className={`card scissor`}>
                 <img className="img" src="/media/scissor.png" alt="rock" />
               </Button>
             )}
             {userPick === 'paper' && (
-              <Button className="card paper">
+              <Button className={`card paper`}>
                 <img className="img" src="/media/paper.png" alt="rock" />
               </Button>
             )}

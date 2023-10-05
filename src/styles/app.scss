@@ -142,6 +142,15 @@ body {
 
   .card {
 
+    &.win {
+      outline: 2rem solid #ffffff20;
+    }
+
+    /* Styles for when setWinOrLose is "l" */
+    &.lose {
+      outline: 2rem solid #ffffff20;
+    }
+
     &:hover {
       outline: 1.2rem solid #ffffff20;
     }

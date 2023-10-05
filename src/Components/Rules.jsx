@@ -9,7 +9,7 @@ export default function Rules() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div className="animate__animated animate__fadeIn">
+    <div className="animate__animated animate__headShake">
       <Button onClick={handleOpen} className="rulesBtn" variant="outlined">
         Rules
       </Button>
