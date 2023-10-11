@@ -48,23 +48,6 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
 
   useEffect(() => {
     generateComputerPick();
-
-    // animations
-    const leftElement = document.querySelector('#left-element');
-    const rightElement = document.querySelector('#right-element');
-
-    // Create the animation
-    gsap.to(leftElement, {
-      x: -100, // Slide to the left by 100 pixels (adjust as needed)
-      duration: 1, // Animation duration in seconds
-      delay: 3, // Delay the animation by 5 seconds
-    });
-
-    gsap.to(rightElement, {
-      x: 100, // Slide to the left by 100 pixels (adjust as needed)
-      duration: 1, // Animation duration in seconds
-      delay: 3, // Delay the animation by 5 seconds
-    });
   }, []);
   return (
     <div id="results">
