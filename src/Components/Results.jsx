@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
-import gsap from 'gsap';
 
 const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
   const [computerGenPick, setComputerGenPick] = useState(null);
@@ -39,11 +38,11 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
     setTimeout(() => {
       setComputerGenPick(computerPick);
       logic(userPick, computerPick);
-    }, 1000);
+    }, 3000);
 
     setTimeout(() => {
       setDelayedMessage(true);
-    }, 3000);
+    }, 5000);
   };
 
   useEffect(() => {
