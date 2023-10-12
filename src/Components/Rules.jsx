@@ -26,7 +26,7 @@ export default function Rules() {
 
             <CloseIcon className="icon" onClick={handleClose} />
           </div>
-          <img src="/media/rules.png" alt="rock paper scissors rules graphic" />
+          <img src="media/rules.png" alt="rock paper scissors rules graphic" />
         </Box>
       </Modal>
     </div>
