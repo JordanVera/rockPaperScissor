@@ -22,7 +22,10 @@ const Results = ({ userPick, scoreCount, setScoreCount, setUserPick }) => {
       setMsg('You win');
       setWinOrLose('w');
       console.log('User Wins');
-      setScoreCount(scoreCount + 1);
+
+      setTimeout(() => {
+        setScoreCount(scoreCount + 1);
+      }, 2000);
     } else {
       setMsg('You lose');
       setWinOrLose('l');
